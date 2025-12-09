@@ -226,15 +226,17 @@ window.addEventListener('load', function () {
 });
 
 function getGuestNameFromQS() {
-  const qs = new URLSearchParams(window.location.search);
-  const guestName = qs.get('guest_name');
+  setTimeout(function () {
+    const qs = new URLSearchParams(window.location.search);
+    const guestName = qs.get('guest_name');
 
-  const namaSambutan = document.querySelector('#namaSambutan');
-  if (guestName) {
-    namaSambutan.innerText = `Kepada ${guestName},`;
-  } else {
-    namaSambutan.innerText = 'Tamu Undangan';
-  }
+    const namaSambutan = document.querySelector('#namaSambutan');
+    if (guestName) {
+      namaSambutan.innerText = `Kepada ${guestName},`;
+    } else {
+      namaSambutan.innerText = 'Tamu Undangan';
+    }
+  }, 2000);
 }
 
 getGuestNameFromQS();
