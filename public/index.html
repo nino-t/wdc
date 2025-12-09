@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wedding Terleun ❤  Hendra </title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/photo2.jpeg" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- lightbox2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="overflow-hidden">
+    <!-- Music -->
+    <!-- <audio
+      class="audio"
+      src="assets/audio/wedding.mpeg"
+      autoplay
+      type="audio"
+      loop
+    ></audio> -->
+    <!-- Sfx Door -->
+    <audio id="doorSound" src="assets/audio/door.wav"></audio>
+
+    <!-- door section -->
+    <div id="door-section" class="open" onclick="mulai()">
+     <h1 class="h1-heading left huruf-sambung" 
+        style="font-weight: bold; color: rgb(19, 18, 18); text-shadow: 2px 2px 8px rgb(175, 154, 62); top: 19%;">
+      Terleun
+    </h1>
+    <h1 class="h1-heading right huruf-sambung" 
+        style="font-weight: bold; color: rgb(19, 18, 18); text-shadow: 2px 2px 8px rgb(175, 154, 62); top: 19%;">
+      Hendra
+    </h1>
+      <div class="doors">
+        <div class="door left">
+          <img src="assets/img/door-left.png" alt="Left Door" />
+        </div>
+        <div class="door right">
+          <img src="assets/img/door-right.png" alt="Right Door" />
+        </div>
+      </div>
+    </div>
+
+    <!-- content section -->
+    <div id="content-section">
+      <!-- navbar -->
+      <ul class="nav">
+        <span class="nav-music"></span>
+        <li>
+          <a href="#acara-section">
+            <i class="fas fa-fw fa-calendar-day"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#lokasi-section">
+            <i class="fas fa-fw fa-location-dot"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#love-story-section">
+            <i class="fas fa-fw fa-heart"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="nav-item-music rotate"
+            id="musicButton"
+            onclick="toggleMusic(event)"
+          >
+            <i class="fas fa-fw fa-compact-disc"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-section">
+            <i class="fas fa-fw fa-image"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gift-section">
+            <i class="fas fa-fw fa-gift"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#rsvp-section">
+            <i class="fas fa-fw fa-check-to-slot"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- hero section -->
+      <section id="hero-section" class="d-flex align-items-center">
+        <img src="assets/img/sparkle.gif" alt="sparkle" class="sparkle" />
+        <div class="container text-center">
+          <h4 class="my-2 text-white">
+            Kepada <span id="namaSambutan"></span>
+          </h4>
+          <h1 class="my-2 text-white huruf-sambung">Terleun & Hendra</h1>
+          <h4 class="my-2 text-white huruf-sambung">
+            Akan Segera Melangsungkan Pernikahan Pada Tanggal
+          </h4>
+          <h4 class="my-2 text-white fw-bold">Senin, 22 Desember 2025</h4>
+          <div
+            class="row my-3 d-flex justify-content-center"
+            id="countdown-wedding"
+          >
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-light">
+                <h5>0</h5>
+                Hari
+              </div>
+            </div>
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-light">
+                <h5>0</h5>
+                Jam
+              </div>
+            </div>
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-light">
+                <h5>0</h5>
+                Menit
+              </div>
+            </div>
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-light">
+                <h5>0</h5>
+                Detik
+              </div>
+            </div>
+          </div>
+          <a
+            href="#pembuka-section"
+            class="rounded-pill text-decoration-none btn btn-lg btn-get-started py-3"
+            ><i class="fas fa-fw fa-envelope-open-text"></i> Buka Undangan</a
+          >
+        </div>
+      </section>
+
+      <!-- pembuka section -->
+      <section id="pembuka-section" class="pembuka-section section-bg py-5">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-pink huruf-sambung fw-bold">
+                  Assalamu'alaikum
+                </h1>
+                <h3>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h3>
+                <p>
+                  Wahai manusia! Bertakwalah kepada Tuhanmu yang telah
+                  menciptakan kamu dari diri yang satu (Adam), dan (Allah)
+                  menciptakan pasangannya (Hawa) dari (diri)-nya; dan dari
+                  keduanya Allah memperkembangbiakkan laki-laki dan perempuan
+                  yang banyak. Bertakwalah kepada Allah yang dengan nama-Nya
+                  kamu saling meminta, dan (peliharalah) hubungan kekeluargaan.
+                  Sesungguhnya Allah selalu menjaga dan mengawasimu.
+                </p>
+                <p>(QS. An-Nisa' (4) : 1)</p>
+              </div>
+
+              <div class="row my-4 justify-content-center">
+                <div
+                  class="col-lg-8 text-center"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="assets/img/photo2.jpeg"
+                    alt="wedding"
+                    class="img-fluid rounded-pill"
+                  />
+                </div>
+              </div>
+
+              <div class="row my-3 justify-content-between">
+                <div
+                  class="col rounded"
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div class="p-2 pt-3 text-center">
+                    <h1 class="text-center huruf-sambung" 
+                        style="font-family: 'Sacramento', cursive; font-weight: 600; font-size: 24px; color: #000; text-shadow: 1px 1px 4px rgba(0,0,0,0.3);">
+                      Terleun Seutiveun Estevereun S.Kep
+                    </h1>
+                    <p>Putri ke Empat dari:</p>
+                    <p>Bapak Alm. Dadang Suryana & Ibu Dede Yuningsih</p>
+                  </div>
+                </div>
+                <div
+                  class="col-sm-1 my-auto"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <h1 class="text-center huruf-sambung" 
+                      style="font-family: 'Sacramento', cursive; font-weight: 600; font-size: 24px; color: #000; text-shadow: 1px 1px 4px rgba(0,0,0,0.3);">
+                    &
+                  </h1>
+                </div>
+                <div
+                  class="col rounded"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div class="p-2 pt-3 text-center">
+                    <h1 class="text-center huruf-sambung" 
+                        style="font-family: 'Sacramento', cursive; font-weight: 600; font-size: 24px; color: #000; text-shadow: 1px 1px 4px rgba(0,0,0,0.3);">
+                      Hendra Dedi Supriadi S.Kom
+                    </h1>
+                    <p>Putra Pertama dari:</p>
+                    <p>Bapak Elon Ramlan & Ibu Lilis Kurnia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- acara section -->
+      <section id="acara-section" class="acara-section py-5">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h1 class="text-pink huruf-sambung fw-bold">
+                  Acara Pernikahan
+                </h1>
+                <p>
+                  Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila,
+                  Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a
+                  restunya, kami ucapkan terima kasih.
+                </p>
+              </div>
+
+              <div class="row justify-content-between px-3 text-center">
+                <div
+                  class="col-lg-6 border my-2 rounded p-3 card-acara"
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <h4>Akad Nikah</h4>
+                  <hr />
+                  <p>
+                    <i class="fas fa-fw fa-calendar-day"></i> Senin, 22 Desember
+                    2025
+                  </p>
+                  <p>
+                    <i class="fas fa-fw fa-clock"></i> 10:00 WIB - 11:30 WIB
+                  </p>
+                  <p>
+                    <i class="fas fa-fw fa-location-dot"></i> Lokasi di
+                    Hotel Horison Tasikmalaya
+                  </p>
+                <a
+                    class="btn btn-lg btn-pink rounded-pill"
+                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Terleun+dan+Hendra&details=Akad+Nikah+Terleun+dan+Hendra&location=Horison+Tasikmalaya,+Jl.+Yudanegara+No.63,+Yudanagara,+Kec.+Cihideung,+Kab.+Tasikmalaya,+Jawa+Barat+46121,+Indonesia&dates=20251222T031000Z%2F20251222T070000Z"
+                    target="_blank"
+                >
+                    <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+                </a>
+                </div>
+                <div
+                  class="col-lg-6 border my-2 rounded p-3 card-acara"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <h4>Resepsi</h4>
+                  <hr />
+                  <p>
+                    <i class="fas fa-fw fa-calendar-day"></i> Senin, 22 Desember
+                    2025
+                  </p>
+                  <p><i class="fas fa-fw fa-clock"></i> 12:30 WIB - 14:00 WIB</p>
+                  <p>
+                    <i class="fas fa-fw fa-location-dot"></i> Lokasi di
+                    Hotel Horison Tasikmalaya
+                  </p>
+               <a
+                    class="btn btn-lg btn-pink rounded-pill"
+                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Terleun+dan+Hendra&details=Akad+Nikah+Terleun+dan+Hendra&location=Horison+Tasikmalaya,+Jl.+Yudanegara+No.63,+Yudanagara,+Kec.+Cihideung,+Kab.+Tasikmalaya,+Jawa+Barat+46121,+Indonesia&dates=20251222T031000Z%2F20251222T070000Z"
+                    target="_blank"
+                >
+                    <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lokasi Section -->
+      <section id="lokasi-section" class="lokasi-section py-5 section-bg">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h1 class="text-pink huruf-sambung fw-bold">
+                  Lokasi Akad & Resepsi Pernikahan
+                </h1>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                  <a
+                    class="btn btn-lg btn-pink mb-4 rounded-pill"
+                    href="https://maps.app.goo.gl/jpJdabgiPwh32Kjn8"
+                    target="_blank"
+                    ><i class="fas fa-fw fa-location-dot"></i> Buka di Google
+                    Maps</a
+                  >
+                <iframe
+                  class="mb-4 mb-lg-0 border-pink"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.255893869958!2d108.21421031525806!3d-7.326046779198684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f574862f59031%3A0x256c5b203fdf4599!2sHorison%20Tasikmalaya!5e0!3m2!1sid!2sid!4v1707529580000!5m2!1sid!2sid"
+                  width="100%"
+                  height="450"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- love story section -->
+      <section id="love-story-section" class="love-story-section py-5">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="section-title">
+            <h1 class="text-pink huruf-sambung fw-bold">Love Story</h1>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg">
+              <ul class="timeline">
+                <li
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-1.jpeg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">
+                        Pertemuan Pertama Terleun dan Hendra
+                      </h3>
+                      <span class="timeline-date">31 Maret 2025</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Berawal dari media sosial, dan memutuskan untuk bertemu di sebuah 
+                        mall yang berada di pusat kota Tasikmalaya. layaknya pertemuan biasa
+                        tidak ada terpikir untuk bisa sampai di titik ini.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="timeline-inverted"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-1.jpeg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Perasaan Mulai Tumbuh</h3>
+                      <span class="timeline-date">Mei 2025</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Seiring berjalannya waktu, perasan kami berdua mulai tumbuh dan berfikir untuk 
+                        dapat melanjutkan ke jenjang yang lebih serius. dan berjalan nya waktu pada bulan september 
+                        kami memutuskan untuk melakukan lamaran dan menentukan tanggal pernikahan.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-1.jpeg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Hari Bahagia</h3>
+                      <span class="timeline-date">Desember 2025</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                       Alhamdulillah, dengan memohon ridho Allah SWT, kami akan melangsungkan pernikahan kami pada hari Senin, 22 Desember 2025. Semoga dengan izin-Nya, kami dapat membina rumah tangga yang penuh berkah, sakinah, mawaddah, dan rahmah, serta selalu bersama sampai akhir hayat, hingga Allah memisahkan kami  
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!-- <li
+                  class="timeline-inverted"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-4.jpg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Pengakuan Perasaan</h3>
+                      <span class="timeline-date">14 Februari 2001</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Pada Hari Valentine, Nobita akhirnya meneguhkan
+                        perasaannya pada Shizuka. Dengan hati berdebar, ia
+                        memberikan hadiah spesial kepada Shizuka dan
+                        mengungkapkan perasaan cintanya. Shizuka tersenyum dan
+                        menjawab bahwa perasaannya pun sama.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-5.jpg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Perjalanan Bersama</h3>
+                      <span class="timeline-date">2001 - 2010</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Setelah mengakui perasaan mereka, Nobita dan Shizuka
+                        menjalani perjalanan panjang bersama. Mereka mengatasi
+                        berbagai rintangan bersama dan saling mendukung dalam
+                        setiap langkah hidup masing-masing. Cinta mereka semakin
+                        dalam seiring berjalannya waktu.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="timeline-inverted"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-6.jpg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Lamaran</h3>
+                      <span class="timeline-date">28 Desember 2010</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Nobita, dengan hati penuh keberanian, melamar Shizuka di
+                        tempat favorit mereka, taman kecil di mana mereka
+                        pertama kali bertemu. Dengan sukses, Shizuka menerima
+                        lamaran tersebut dengan penuh kebahagiaan.
+                      </p>
+                    </div>
+                  </div>
+                </li> -->
+                <!-- <li
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-7.jpg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Pernikahan Bahagia</h3>
+                      <span class="timeline-date">10 September 2011</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Pada tanggal yang dipilih dengan cermat, Nobita dan
+                        Shizuka mengikat janji suci mereka dalam sebuah
+                        pernikahan yang sederhana dan penuh cinta. Mereka
+                        berjanji untuk saling mendukung dalam suka dan duka
+                        sepanjang hidup mereka.
+                      </p>
+                    </div>
+                  </div>
+                </li> -->
+                <!-- <li
+                  class="timeline-inverted"
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    class="timeline-badge"
+                    style="
+                      background-image: url('assets/img/timeline/timeline-8.jpg');
+                    "
+                  ></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Perjalanan Hidup Bersama</h3>
+                      <span class="timeline-date">2011 - Sekarang</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Setelah menikah, Nobita dan Shizuka terus menjalani
+                        perjalanan hidup mereka bersama-sama. Dengan cinta,
+                        pengertian, dan dukungan satu sama lain, mereka
+                        menghadapi setiap tantangan dengan kepala tegak dan hati
+                        penuh kebahagiaan.
+                      </p>
+                    </div>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- gallery section -->
+      <!-- <section id="gallery-section" class="gallery-section py-5 section-bg">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="section-title">
+            <h1 class="text-pink huruf-sambung fw-bold">Gallery</h1>
+          </div>
+
+          <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/1.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/1.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/2.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/2.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/3.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/3.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/4.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/4.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/5.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/5.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/6.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/6.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/7.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/7.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/8.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/8.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/9.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/9.jpeg"
+                  alt="Hendra & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/10.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/10.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/11.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/11.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/12.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/12.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/13.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/13.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/14.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/14.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/15.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/15.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a
+                href="assets/img/gallery/16.jpeg"
+                data-lightbox="nobitaShizuka"
+                class="text-decoration-none"
+              >
+                <img
+                  src="assets/img/gallery/16.jpeg"
+                  alt="nobita & shizuka"
+                  class="card-img border-pink"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <iframe
+                class="border-pink"
+                width="100%"
+                height="500"
+                src="https://www.youtube.com/embed/aaWrLldCkJI?si=Own1t-JbhCW54mR5"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- gift section -->
+     <section id="gift-section" class="gift-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h1 class="text-pink huruf-sambung fw-bold">Wedding Gift</h1>
+          <p>
+            Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah
+            pernikahan dapat melalui Qris e-wallet di bawah ini:
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Card BCA -->
+          <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="my-4 mx-auto position-relative credit-card">
+              <img src="assets/img/card/logo-bca.png" alt="Logo BCA" class="card-logo" />
+              <div class="card-container">
+                <img src="assets/img/card/sim.png" alt="sim" class="card-sim" />
+                <div class="card-number">0580845371</div>
+              </div>
+              <div class="card-name mt-2">Hendra Dedi Supriadi</div>
+              <a style="cursor: pointer" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                <i class="fas fa-regular fa-copy"></i> Copy
+              </a>
+            </div>
+               <!-- Card GoPay -->
+            <div class="my-4 mx-auto position-relative credit-card" 
+                style="width: 300px; padding: 20px; text-align: center; 
+                        border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+                        background-color: #cfbb6a;">
+              <!-- QRIS Image -->
+              <div style="margin-bottom: 20px;">
+                <img src="assets/img/myqris.jpeg" alt="QRIS GoPay" 
+                    style="width: 220px; height: 220px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+              </div>
+              <!-- Nama & Ucapan -->
+              <div style="display: flex; justify-content: space-between; align-items: center; 
+                          margin-bottom: 10px; font-size: 16px; font-weight: lighter; color: #000;">
+                <div class="card-name mt-2">Hendra Dedi Supriadi</div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- rsvp section -->
+      <section id="rsvp-section" class="rsvp-section section-bg py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-pink huruf-sambung fw-bold">RSVP</h1>
+                <p>
+                  Isi form di bawah ini untuk melakukan konfirmasi kehadiran
+                  Anda.
+                </p>
+              </div>
+              <form
+                action="https://script.google.com/macros/s/AKfycbyIfjWG5EjQiyYk3R8n0MnmlJM6TcOYWuG4HvBaq3VpbINVZyMZvvNVjCDLffH61Aq7/exec"
+                class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+                id="rsvp-form"
+                method="POST"
+              >
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nama"
+                      name="nama"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="jumlah" class="form-label">Jumlah</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="jumlah"
+                      name="jumlah"
+                      min="1"
+                      max="5"
+                      length="1"
+                      value="1"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="status" class="form-label">Status</label>
+                    <select name="status" id="status" class="form-select">
+                      <option value="0" selected>Pilih salah satu</option>
+                      <option value="Hadir">Hadir</option>
+                      <option value="Tidak Hadir">Tidak Hadir</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 mt-3">
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-kirim">
+                      <i class="fas fa-fw fa-paper-plane"></i> Kirim
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <!-- <div class="row mt-5 justify-content-center">
+                <div class="col-lg-12">
+                  <div id="disqus_thread"></div>
+                  <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function () {
+                      // DON'T EDIT BELOW THIS LINE
+                      var d = document,
+                        s = d.createElement('script');
+                      s.src =
+                        'https://wedding-nobita-shizuka-1.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                    })();
+                  </script>
+                  <noscript
+                    >Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript"
+                      >comments powered by Disqus.</a
+                    ></noscript
+                  >
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- penutup section -->
+      <section id="penutup-section" class="penutup-section py-5">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-pink huruf-sambung fw-bold">
+                  Wassalamu'alaikum
+                </h1>
+                <p>
+                  Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
+                  Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu
+                  kepada kami.
+                </p>
+                <h5 class="my-3">KAMI YANG BERBAHAGIA</h5>
+                <h1 class="huruf-sambung">Terleun & Hendra</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer id="footer" class="mb-2 pb-2">
+        <div class="container py-5 text-center position-relative">
+          <div class="row">
+            <!-- <div class="col-12 my-3">
+              <a
+                href="https://youtube.com/c/hauscoding"
+                target="_blank"
+                class="text-decoration-none text-pink fw-bold"
+                >&copy; 2024. Made with ❤ by Haus Coding</a
+              >
+            </div> -->
+            <div class="col-12 my-3">
+              <a href="#" class="text-pink"
+                ><i class="fas fa-fw fa-arrow-up"></i> Back to top</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- lightbox2 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
+      integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- sweetalert2 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js"
+      integrity="sha256-iSkyJ41luwYhZX4JnDUop92wix0y8SBGAW5tCnnCfZ4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- masonry -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <!-- js -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
